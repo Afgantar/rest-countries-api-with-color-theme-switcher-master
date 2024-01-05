@@ -23,6 +23,7 @@ const HomePage = () => {
 
   useEffect(() => {
     let initialData = JSON.parse(sessionStorage.getItem("querydata"));
+    if (!initialData) return;
     setQuery({
       search: initialData.search,
       filter: initialData.filter,

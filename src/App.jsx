@@ -8,6 +8,7 @@ const App = () => {
 
   useEffect(() => {
     let darkMode = sessionStorage.getItem('darkmode');
+    if (!darkMode) return;
     if(darkMode === "true") {
       setUseDark(true);
     }

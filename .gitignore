@@ -23,7 +23,7 @@ dist-ssr
 *.sln
 *.sw?
 
-#Extras
+# Extras
 *.sketch
 *.xd
 *.fig
