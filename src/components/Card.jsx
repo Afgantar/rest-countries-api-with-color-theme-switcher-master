@@ -39,7 +39,11 @@ export const Card = ({ img, name, pops, region, capital }) => {
             <strong>Region:</strong> {region}
           </p>
           <p>
-            <strong>Capital:</strong> {capital}
+            <strong>Capital:</strong>{" "}
+            {capital !== undefined && (capital.map(
+              (city, index) =>
+                `${city}${capital.length - 1 === index ? "" : ", "}`
+            ))}
           </p>
         </div>
       </div>

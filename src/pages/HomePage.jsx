@@ -16,7 +16,7 @@ const HomePage = () => {
   const { countriesData } = useData();
   const wantedCountry = countriesData.filter((country) => {
     return (
-      country.name.toLowerCase().includes(query.search.toLowerCase()) &&
+      country.name.common.toLowerCase().includes(query.search.toLowerCase()) &&
       country.region.toLowerCase().includes(query.filter.toLowerCase())
     );
   });
@@ -160,9 +160,9 @@ const HomePage = () => {
         {wantedCountry.length !== 0 &&
           wantedCountry.map((country) => (
             <Card
-              key={country.name}
+              key={country.name.common}
               img={country.flags.png}
-              name={country.name}
+              name={country.name.common}
               pops={country.population}
               region={country.region}
               capital={country.capital}
